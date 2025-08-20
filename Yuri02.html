@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N5QGDGRFS6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-N5QGDGRFS6');
+</script>
+  
+  <meta charset="UTF-8">
+  <title>Ola Tonota</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #1b0c2e, #2c1a44);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      min-height: 100vh;
+      transition: background 0.4s ease;
+      overflow: hidden; /* para que las partículas no saquen scroll */
+    }
+
+    .modoClaro {
+      background: linear-gradient(to bottom right, #f3eaff, #e6d6ff);
+    }
+
+    .top-buttons {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      display: flex;
+      gap: 10px;
+      z-index: 10;
+    }
+
+    .carta {
+      position: relative;
+      background: #2e1b47;
+      border: 2px solid #9c6fe5;
+      border-radius: 20px;
+      padding: 30px;
+      width: 90%;
+      max-width: 500px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(100, 60, 150, 0.5);
+      animation: fadeIn 2s ease;
+      transition: background 0.4s ease, color 0.4s ease;
+      z-index: 5; /* para que quede sobre las partículas */
+    }
+
+    .modoClaro .carta {
+      background: #ffffff;
+      color: #333;
+      border: 2px solid #b399ff;
+    }
+
+    .decoracion {
+      width: 100px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(180, 120, 255, 0.4);
+    }
+
+    h1 {
+      color: #d4b3ff;
+      font-size: 1.8em;
+      margin-bottom: 10px;
+      min-height: 2em;
+    }
+
+    .modoClaro h1 {
+      color: #5e429d;
+    }
+
+    p {
+      color: #e5d4ff;
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    .modoClaro p {
+      color: #333;
+    }
+
+    .emojis {
+      font-size: 1.5em;
+      margin-top: 15px;
+      color: #f0dfff;
+    }
+
+    .modoClaro .emojis {
+      color: #7a5ca8;
+    }
+
+    button {
+      padding: 8px 14px;
+      border: none;
+      border-radius: 10px;
+      background-color: #9c6fe5;
+      color: white;
+      font-size: 0.9em;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #b48cf0;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .click-reveal {
+      color: #ccc;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .modoClaro .click-reveal {
+      color: #666;
+    }
+
+    .secreto {
+      display: none;
+      margin-top: 10px;
+      color: #ffd;
+    }
+
+    .modoClaro .secreto {
+      color: #444;
+    }
+
+    /* EXTRA: efecto de escritura */
+    .typing {
+      border-right: 2px solid #d4b3ff;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    /* EXTRA: Canvas de partículas */
+    #particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Canvas para partículas -->
+  <canvas id="particles"></canvas>
+
+  <div class="top-buttons">
+    <button onclick="toggleTheme()">🌙/☀️</button>
+    <button onclick="toggleMusic()">🎵</button>
+  </div>
+
+  <div class="carta">
+    <h1 id="titulo" class="typing"></h1>
+    <p id="fraseAleatoria" style="font-style: italic; margin-bottom: 20px;"></p>
+
+    <p>
+      Yuriko 💜<br><br>
+       Hola Yuri, mi niña, buenas noches, ¿cómo estás? Espero que te sientas bien, ¿cómo va tu garganta? ¿Y tu gripa? Paso a escribirte esto para que sepas que no he dejado de pensar en ti, espero no molestarte con esto. Te he tenido presente en cada momento de mi día, quiero que tampoco olvides que aquí me tienes para lo que necesites. Sé que hoy estuviste ocupada, así que solo espero que puedas descansar bien mientras.
+    </p>
+
+    <img class="decoracion" src="https://static.vecteezy.com/system/resources/previews/020/575/262/original/pink-lilies-with-buds-on-the-stems-watercolor-painting-free-png.png" alt="Milo J jeje">
+
+    <p>
+      ¿Sabes? Estaba pensando en lo maravillosa que eres. Sé que ya te lo dije muchas veces, pero es que es en serio, y quizás en lo de Minecraft del otro día no lo expliqué bien, pero es algo que te explicaré en algo más elaborado que esto. Solo quiero que sepas, que recuerdes y no olvides que tú eres una persona que realmente admiro, y de la cual estoy orgulloso. Puedo decir que eres realmente muy importante para mí, a un nivel que no imaginas. Eres lo primero en lo que pienso cuando me levanto y lo último en lo que pienso cuando me duermo. Eres mi razón de querer ser alguien mejor. Sé muy bien cuánto te cuesta dar cariño, y eso no tiene nada de malo, yo adoro cada lado de ti, así que espero que nunca, nunca te sientas obligada a devolverme nada si es que te llegas a sentir así. Si un día te molesta que haga o diga algo, dímelo; si te llega a parecer molesto, también, o lo que sea, dímelo. Yo trataré de cambiar eso que no te guste, créeme que haré ese esfuerzo. Pido perdón por adelantado si un día llego a ser muy inseguro con respecto a esto, lo que menos quiero es que te canses por cómo soy o que te parezca muy molesto y así.
+    </p>
+
+    <p>
+      Pasando a otra cosa, para mí eres muy encantadora. Sé que no dejo de repetirlo, tal y como ya lo dije aquí, no sé cómo le haces para gustarme cada día más. Cada gesto tuyo me encanta: esos gritos que das de repente cuando te emocionas, esa risa que haces con la voz grave tipo "JAH JAH JAH" me gusta mucho; esa otra risa más aguda me gusta también; me encanta cuando me cuentas de todo lo que te gusta, como cuando me hablas de fútbol y yo a veces no entiendo nada, pero me gusta oírte en tu modo de "explicación".
+    </p>
+
+    <img class="decoracion" src="https://c.tenor.com/z-TvY04VNsYAAAAC/pompompurin-vivian-kong.gif" alt="Tulipanes">
+
+    <p>
+      Tu voz en modo serio me gusta un montón también, esa risa nerviosa que a veces haces, cuando te asustas, cuando te ríes como loca. En cada momento solo quiero abrazarte. Me pareces tan tierna, tan hermosa, linda y preciosa, cuando hablas de tus personajes favoritos, los cuales son tus maridos jajaja.
+    </p>
+
+    <p>Me aceleras el corazón con cada acción que haces, que siento que podría darme un infarto jajaja.
+Eres increíble, ya te lo dije antes, pero te diré de nuevo que te quiero tanto, con todo y tus defectos, con tus metas y sueños. Quiero estar contigo, quiero que juntos mejoremos y avancemos en esta vida, lento, constante, pero juntos ;D</p>
+    <img class="decoracion" src="https://c.tenor.com/cHIcIqCfqsEAAAAj/sanrio-pom.gif" alt="Tulipanes">
+
+    <p>— Con Amor: David 💌</p>
+
+    <div class="emojis">🌷🎮💜🎧🫂</div>
+
+    <div class="click-reveal" onclick="document.getElementById('secreto').style.display='block'">
+      🌸 Haz clic si quieres leer una última cosita
+    </div>
+    <div id="secreto" class="secreto">
+      <p> Te extraño </p>
+
+    </div>
+  </div>
+
+  <!-- Música de fondo -->
+  <audio id="bgMusic" autoplay loop>
+  <source src="https://doiker380.github.io/Yuri/Cancion.mp3" type="audio/mpeg">
+  Tu navegador no soporta audio.
+</audio>
+
+  <!-- Script -->
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('modoClaro');
+    }
+
+    function toggleMusic() {
+      const music = document.getElementById("bgMusic");
+      if (music.paused) {
+        music.play();
+      } else {
+        music.pause();
+      }
+    }
+
+    // EXTRA: efecto escritura
+    const textoTitulo = "Hola mi niña";
+    let i = 0;
+    function typeEffect() {
+      if (i < textoTitulo.length) {
+        document.getElementById("titulo").innerHTML += textoTitulo.charAt(i);
+        i++;
+        setTimeout(typeEffect, 70);
+      }
+    }
+    window.onload = typeEffect;
+
+    // EXTRA: frases aleatorias
+    const frases = [
+      "Te quiero tanto",
+      "Siempre pienso en ti",
+      "Amo tu risa",
+      "Quiero estar contigo",
+      "Adoro tu voz",
+      "Eres mi motivo para esforzarme"
+    ];
+    const randomFrase = frases[Math.floor(Math.random() * frases.length)];
+    document.getElementById("fraseAleatoria").innerText = randomFrase;
+
+    // EXTRA: partículas flotando
+    const canvas = document.getElementById("particles");
+    const ctx = canvas.getContext("2d");
+    let particlesArray;
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    class Particle {
+      constructor(x, y, size, speedX, speedY) {
+        this.x = x;
+        this.y = y;
+        this.size = size;
+        this.speedX = speedX;
+        this.speedY = speedY;
+      }
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+
+        if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+        if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+      }
+      draw() {
+        ctx.fillStyle = "rgba(255, 230, 255, 0.8)";
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    function initParticles() {
+      particlesArray = [];
+      for (let i = 0; i < 50; i++) {
+        let size = Math.random() * 3 + 1;
+        let x = Math.random() * canvas.width;
+        let y = Math.random() * canvas.height;
+        let speedX = (Math.random() - 0.5) * 0.6;
+        let speedY = (Math.random() - 0.5) * 0.6;
+        particlesArray.push(new Particle(x, y, size, speedX, speedY));
+      }
+    }
+
+    function animateParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let i = 0; i < particlesArray.length; i++) {
+        particlesArray[i].update();
+        particlesArray[i].draw();
+      }
+      requestAnimationFrame(animateParticles);
+    }
+
+    initParticles();
+    animateParticles();
+
+    window.addEventListener("resize", function () {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      initParticles();
+    });
+  </script>
+</body>
+</html>
