@@ -25,7 +25,8 @@
       flex-direction: column;
       min-height: 100vh;
       transition: background 0.4s ease;
-      overflow: hidden; /* para que las partículas no saquen scroll */
+      overflow-x: hidden; /* solo bloquea scroll horizontal */
+      overflow-y: auto;   /* habilita scroll vertical */
     }
 
     .modoClaro {
@@ -319,5 +320,6 @@ Eres increíble, ya te lo dije antes, pero te diré de nuevo que te quiero tanto
   </script>
 </body>
 </html>
+
 
 
